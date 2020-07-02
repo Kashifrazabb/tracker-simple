@@ -1,0 +1,57 @@
+*{padding:0;margin:0;box-sizing: border-box;font-family: sans-serif;}
+
+body{width:100%;height:100vh;background: dodgerblue;display: flex;justify-content: center;
+  align-items: center;}
+
+#root{
+  width:500px;min-height:90vh;background: white;box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+#wrapper{width:80%;margin:0 auto}
+
+#header{text-align: center;font-size: 40px;color: dodgerblue;font-weight: bolder;
+margin:20px 0}
+
+#total{text-align: center;margin-bottom: 20px; }
+#total h3{font-size: 20px;}
+#total p{font-size: 30px;color:dodgerblue}
+
+#incomeexpensetotal{display: flex;justify-content: space-evenly;padding:20px 0;
+background:rgb(49, 133, 218);color:white;text-align: center;}
+#text-center{text-align: center;}
+
+#history{margin-bottom:20px}
+#history ul{list-style: none;height:150px;overflow-y: auto;}
+#history ul li{display: flex;justify-content: space-between;align-items: center;padding:0 10px;margin-bottom:5px}
+#history ul li h4{color:dodgerblue}
+#history-btn-title{display: flex;justify-content: space-between;align-items: center}
+#del-btn,#edit-btn{width:10px;height:10px}
+#del-btn:hover{color:red}
+#edit-btn:hover{color:rgb(102, 214, 130)}
+#clr-btn{background: dodgerblue;color:white}
+
+
+#form-title{margin-bottom:20px}
+form #amount{margin:20px 0}
+form label{color:dodgerblue;font-weight: bold;}
+form  input {width:100%;border:none;border-bottom: 1px solid dodgerblue;padding:10px;
+caret-color: dodgerblue;}
+form input:focus{outline: none;}
+form button {width:100%;padding:10px 0;background: dodgerblue;color:#fff;
+border:none;border:1px solid dodgerblue;}
+form button:focus{outline: none;}
+form button:hover{color:dodgerblue;background: #fff;}
+
+#footer{text-align:center;color:dodgerblue;margin-top:10px}
+
+.alert {width:25%;position: absolute;top:0;left:37.5%;height:40px;
+color:#fff;text-align: center;line-height: 40px;font-size:20px}
+.alert-success{background: rgb(57, 216, 57)}
+.alert-fail{background: crimson}
+.alert-cleared{background: slateblue;}
+
+@media (max-width:500px){
+  #root{
+    width:100%;height:100vh
+  }
+}
