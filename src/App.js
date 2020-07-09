@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import uuid from 'uuid/dist/v4';
 import Header from './Components/Header';
 import Total from './Components/Total';
@@ -10,13 +10,18 @@ import Alert from './Components/Alert';
 
 
 function App() {
+  let LocalData=localStorage.getItem('MyData');
+  LocalData=LocalData?JSON.parse(LocalData):[];
   // Hooks
   const [charge,setCharge]=useState('');
   const [amount,setAmount]=useState('');
-  const [data,setData]=useState([{charge:'',amount:''}]);
+  const [data,setData]=useState(LocalData);
   const [btnText,setBtnText]=useState(false);
   const [ID,setID]=useState(0);
   const [alert,setAlert]=useState({show:false,text:'',type:''});
+
+  useEffect(()=>localStorage.setItem('MyData',JSON.stringify(data)),[data])
+
  //Handles
  const handleCharge=e=>setCharge(e.target.value);
  const handleAmount=e=>setAmount(e.target.value);
